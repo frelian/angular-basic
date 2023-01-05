@@ -9,35 +9,17 @@ import { DbzService } from '../servicess/dbz.service';
 })
 export class MainPageComponent {
 
-  characters: Character[] = [
-    {
-      name: 'Goku',
-      power: 15000
-    },
-    {
-      name: 'Vegeta',
-      power: 9500
-    }
-  ];
-
   new: Character = {
     name : '',
     power: 0
   }
 
-  addNewCharacter( argument: Character ) {
-    this.characters.push( argument )
+  /* getter
+  get characters(): Character[] {
+    return this.dbzService.characters;
   }
-
-  /*
-    Forma corta de definir propiedades de la clase se llamaÑ
-        Inyeccion de dependencias
-    Donde, private seguido del nombre de la propiedad 
-    Luego ":" y el tipo de dato, que seria DbzService
-
   */
-  constructor ( private dbzService: DbzService ) {
-    
-  }
+
+  constructor () {}
 
 }
