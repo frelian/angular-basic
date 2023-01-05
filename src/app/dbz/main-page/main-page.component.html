@@ -1,0 +1,29 @@
+<h1>Dragon Ball Z</h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <app-characters [data]="characters"></app-characters>
+    </div>
+
+    <div class="col">
+        <app-add 
+            [new]="new"
+            (onNewCharacter)="addNewCharacter( $event )"
+        ></app-add>
+    </div>
+
+    <div class="col">
+        <form action="">
+            <input 
+                type="text"
+                id="input-message"
+                class="input"
+                name="message"
+                placeholder="Enter Message"
+            />
+            <button id="submit-message" class="btn btn-dark">Show message</button>
+        </form>
+
+    </div>
+</div>
