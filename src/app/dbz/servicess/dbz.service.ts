@@ -23,4 +23,9 @@ export class DbzService {
     constructor() {
         console.log('Initialized service')
     }
+
+    // Requiero un personaje/data de tipo Character
+    addCharacter( character: Character ) {
+      this._characters.push( character );
+    }
 }
